@@ -16,40 +16,14 @@
 
 <ion-content>
 
-    <!-- Pagina web -->
-    <!-- <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-        <ion-fab-button color="light" mode="ios">
-            <ion-icon name="camera"></ion-icon>
-        </ion-fab-button>
-    </ion-fab> -->
-
-    <!-- Codigo mau -->
-
-
-    <!-- <ion-card class="animated zoomInDown" mode="ios">
+    <!-- QR de Págo -->
+    <!-- <qrcode [qrdata]="'Your QR code data string'" [size]="256" [level]="'M'"></qrcode> -->
+    <ion-card class="animated zoomInDown" mode="ios">
         <ion-row>
             <ion-col size="6">
                 <div text-center>
                     <ngx-qrcode [qrc-value]="qrCode"></ngx-qrcode>
-
-                </div>
-            </ion-col>
-            <ion-col size="6">
-                <h3>Págo De:</h3>
-                <div text-left class="animated bounceInLeft" *ngIf="createdCode">
-                    <a style="font-weight: bold; font-size: 32px; color:#616161;">${{ createdCode }}</a>
-                </div>
-            </ion-col>
-        </ion-row>
-    </ion-card> -->
-
-    <!-- Codigo youtube -->
-
-    <ion-card class="animated zoomInDown" mode="ios">
-        <ion-row>
-            <ion-col size="6">
-                <div text-center *ngIf="createdCode">
-                    <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+                    <!-- <qrcode [qrdata]="'Your QR code data string'" [size]="256" [level]="'M'"></qrcode> -->
                 </div>
             </ion-col>
             <ion-col size="6">
@@ -61,34 +35,16 @@
         </ion-row>
     </ion-card>
 
-    <ion-card>
-        <ion-item>
-            <ion-input type="text" placeholder="Escriba la cantidad" [(ngModel)]="qrData"></ion-input>
-        </ion-item>
-
-        <ion-button expand="block" icon-left (click)="createCode()">
-            <ion-icon name="barcode"></ion-icon>
-            Crear Code
-        </ion-button>
-    </ion-card>
-
-
-    <!-- <ion-button expand="block" icon-left (click)="scanCode()">
-        <ion-icon name="qr-scanner"></ion-icon>
-        Scanner
-    </ion-button>
-
-
-
-    <ion-card *ngIf="scannedCode">
-        <ion-card-content>
-            Result from Scan: {{scannedCode}}
-        </ion-card-content>
-    </ion-card> -->
+    <ion-fab class="animated pulse" vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button color="light" mode="ios">
+            <ion-icon name="resize"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
 
 </ion-content>
 
-<!-- <ion-footer class="animated fadeInUp" color="light" mode="ios">
+
+<ion-footer class="animated fadeInUp" color="light" mode="ios">
     <ion-row>
         <ion-col size="4">
             <ion-button mode="ios" color="light" expand="block" (click)="oneButton()">1</ion-button>
@@ -131,4 +87,4 @@
             </ion-button>
         </ion-col>
     </ion-row>
-</ion-footer> -->
+</ion-footer>
